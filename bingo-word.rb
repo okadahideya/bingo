@@ -14,7 +14,7 @@ hit_word.each do |hit|
       hit_list[hit_w] = true                    #同じ場合trueの印をつける
     end
 end
-hit_card = hit_list.each_slice(S).to_a
+hit_card = hit_list.each_slice(S).to_a   #二次元配列に戻す
 
 # true or falseでビンゴの確認を行う
 slanting_left = Array.new(S){|i| hit_card[i][i] }.all?      # 斜め
